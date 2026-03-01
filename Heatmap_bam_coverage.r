@@ -3,6 +3,7 @@
 # ===============================
 # Author: Kilian Kapitza
 # Creates Coverage Heatmap of NCF1 specific SNPs
+# conda environment Coverage_env has to be activated
 
 # Load required packages
 library(Rsamtools)
@@ -11,14 +12,14 @@ library(GenomicAlignments)
 library(ggplot2)
 
 # 1. Load BED file with SNP positions ------------------------
-bed_file <- "/home/kiliankapitza/Desktop/NCF1_KK/NCF1AB_SNP_UTF8.bed"		# NCF1AB_SNP_UTF8_bed as input to give coordinates of NCF1 specific SNPs (has to be UTF8, NOT UTF16)
+bed_file <- "/NCF1AB_SNP_UTF8.bed"		# NCF1AB_SNP_UTF8_bed as input to give coordinates of NCF1 specific SNPs (has to be UTF8, NOT UTF16)
 
 bed <- read.table(bed_file, sep = "\t", header = FALSE,
                   col.names = c("Chromosome", "Position", "REF", "ALT"),
                   stringsAsFactors = FALSE)
 
 # 2. List BAM files ------------------------------------------
-bam_dir <- "/home/kiliankapitza/Desktop/NCF1_KK/Ergebnisse_Stand_031225/NCF1_20250520_AS_NP_TP5/19-mer/Alignment"  # aligned bam file as input
+bam_dir <- "/path/to/your/bam/folder"  # folder with aligned bam files as input
 bam_files <- list.files(bam_dir, pattern = "\\.bam$", full.names = TRUE)
 
 # Automatically create BAM index files if missing
