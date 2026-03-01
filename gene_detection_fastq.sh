@@ -6,10 +6,10 @@
 
 # ===== KONFIGURATION =====
 
-FASTQ_DIR="./NCF1_20251218_AS_Mat5844_Pat_TP11_fastq_pass_all"        		 			# Ordner mit gezippten FastQ-Dateien
+FASTQ_DIR="./Path/to/your/fastq/folder"        		 			# Ordner mit gezippten FastQ-Dateien
 REF_FILE="./NCF1_SNPs_Indels_KK.tsv"        			# Deine Referenzdatei
-OUTPUT_FILE="combined_results_NCF1_TH0_KM19_Mat5844_Pat_TP11.fastq" 				# Kombinierte Ausgabedatei
-PLOT_FILE="combined_histogram_NCF1_TH0_KM19_Mat5844_Pat_TP11.png"		 			# Ausgabedatei für den Plot
+OUTPUT_FILE="NCF1_TH0_KM19__Pat.fastq" 				# Kombinierte Ausgabedatei
+PLOT_FILE="histogram_NCF1_TH0_KM19_Pat.png"		 			# Ausgabedatei für den Plot
 PYTHON_SCRIPT="./gene_detection_multithread_15mer.py" 		# Python-Skript
 TEMP_DIR="./temp_results"        					# Temporäres Verzeichnis für Zwischenergebnisse
 STATS_DIR="./match_stats"             				# Verzeichnis für Match-Statistiken
