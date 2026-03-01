@@ -27,7 +27,7 @@ library(dplyr)
 library(tools)
 library(forcats)
 
-#1. import the reference BED file containing RhesusBox-specific SNPs (position + nucleotide modification)
+#1. import the reference BED file containing NCF1-specific SNPs (position + nucleotide modification)
 bed_file <- file.choose()
 bed <- read.table(bed_file, sep = "\t", header = FALSE,
                   col.names = c("Chromosome", "Position", "REF", "ALT"),
@@ -132,3 +132,4 @@ ggplot(df_final, aes(x = factor(Position), y = TH_value, fill = Frequency)) +
     panel.border = element_blank()
 
   )
+
