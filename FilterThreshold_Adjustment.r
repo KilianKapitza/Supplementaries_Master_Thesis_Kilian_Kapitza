@@ -1,4 +1,6 @@
-# Über gene_detection_fastq.sh gefilterte Fastq-Dateien erhalten einen match score in ihrem Header. Dieses Skript ist dafür da den ursprünglich genutzten Threshold nachträglich zu erhöhen. Dabei werden alle Reads, deren match score geringer als der neu angelegte threshold ist, aussortiert.
+# Über gene_detection_fastq.sh gefilterte Fastq-Dateien erhalten einen match score in ihrem Header. 
+# Dieses Skript ist dafür da den ursprünglich genutzten Threshold nachträglich zu erhöhen. Dabei werden alle Reads, deren match score geringer als der neu angelegte threshold ist, aussortiert.
+# Ausführung über Ausführung_FilterThreshold_Adjustment.sh
 # Load required libraries
 suppressPackageStartupMessages({
   library(optparse)
