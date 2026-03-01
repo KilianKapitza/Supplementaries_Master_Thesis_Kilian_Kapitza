@@ -1,6 +1,8 @@
 # ===============================
-# SNP Coverage vs. Position Plot from BAMs - Right and Working Script for line graph showing coverage across the whole NCF1 region between different Thresholds
+# Coverage vs. Position Plot from BAMs - line graph showing coverage across the whole NCF1 region between different Thresholds
 # ===============================
+# Author: Kilian Kapitza
+# conda environment Coverage_env has to be activated
 
 # Load required packages
 library(Rsamtools)
@@ -10,7 +12,7 @@ library(ggplot2)
 library(dplyr)
 
 # 1. Load BED file with SNP positions ------------------------
-bed_file <- "/home/kiliankapitza/Desktop/NCF1_KK/NCF1_start_to_end.bed"
+bed_file <- "/NCF1_start_to_end.bed"    # bed file with start and end coordinate of NCF1
 
 bed <- read.table(bed_file, sep = "\t", header = FALSE,
                   col.names = c("Chromosome", "Start", "End", "Name"),
@@ -18,7 +20,7 @@ bed <- read.table(bed_file, sep = "\t", header = FALSE,
 
 
 # 2. List BAM files ------------------------------------------
-bam_dir <- "/home/kiliankapitza/Desktop/NCF1_KK/Ergebnisse_Stand_031225/NCF1_20250520_AS_NP_TP5/19-mer/Alignment"
+bam_dir <- "/path/to/your/bam/folder"  # folder with bam files
 bam_files <- list.files(bam_dir, pattern = "\\.bam$", full.names = TRUE)
 
 # Check BAM index files
