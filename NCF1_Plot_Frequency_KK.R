@@ -1,14 +1,14 @@
 ## ---------------------------
 ##
-## Script name: Rhesus Box Evaluation
+## Script name: Heatmap pseudogene frequency
 ##
 ## Purpose of script:Compares variant data from multiple VCF-derived files to a 
-## set of RhesusBox-specific SNP positions and visualizes allele frequencies in 
+## set of NCF1-specific SNP positions and visualizes allele frequencies in 
 ## a heatmap.
 ##
-## Author: Annika Vogt
+## Author: Annika Vogt, Kilian Kapitza
 ##
-## Date Created: 2025-05-14
+## Date Created: 2025-08-14
 ##
 ## ---------------------------
 ##
@@ -130,4 +130,5 @@ ggplot(df_final, aes(x = factor(Position), y = TH_value, fill = Frequency)) +
     axis.text.y = element_text(size = 8),
     plot.background = element_blank(),
     panel.border = element_blank()
+
   )
