@@ -1,5 +1,5 @@
   #!/bin/bash
-  
+# Author: Kilian Kapitza  
 # Pfad des Inputs: bereits durch gene_detection_fastq.sh gefilterte fastq
 # Pfad und Benennung des Outputs: Gefilterte Fastq Datei mit erhöht angepasstem Threshold
 # Einstellen des Thresholds, also der Anzahl an K-mers die pro Read zu finden sein müssen
@@ -37,11 +37,4 @@ for THRESHOLD in $(seq 50 10 200); do
 done
 
 
-###OUTDATED###
-# Nutzung: R_SCRIPT nicht verändern; INPUT_FASTQ pfad verändern je nach Datensatz + wenn TH50 and danach TH60-200 gemacht wird auch INPUT_FASTQ von TH0 zu TH50 ändern
-# OUT_DIR in gleichen Ordner wie INPUT_FASTQ; Threshold nach bedarf ändern einzeln mit for THRESHOLD in 50; do oder durchgängig mit for THRESHOLD in $(seq 60 10 200); do
-# OUTPUT_FASTQ und PLOT_FILE ebenfalls jedes mal KM und TP ändern
 
-
-# for THRESHOLD in .... muss nicht mehr geändert werden, da als nächste Startdatei die vorherige Enddatei verwendet wird. Dadurch geht die Geschwindigkeit extrem hinauf
-# Namen für OUT_DIR, INPUT_FASTQ, OUTPUT_FASTQ und PLOT_FILE müssen immer noch regelmäßig verändert werden
