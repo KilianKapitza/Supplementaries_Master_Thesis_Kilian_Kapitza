@@ -11,7 +11,7 @@ R_SCRIPT="/FilterThreshold_Adjustment.r"
 OUT_DIR="/Path/to/your/fastq" # Input+Output Path
 
 # Startdatei: TH0
-INPUT_FASTQ="${OUT_DIR}/NCF1_Pat_15mer_TH0.fastq"	# Welche Startdatei verwendet werden soll
+INPUT_FASTQ="${OUT_DIR}/your_file.fastq"	# Welche Startdatei verwendet werden soll
 # Liste der Thresholds, die du testen möchtest
 # entweder for THRESHOLD in 50 100 150 200; do für diese 4 Threshold oder for THRESHOLD in $(seq 50 10 200); do für alle Thresholds von 50 bis 200 in 10er Schritten
 # #outdated# für schnelleres sorting: erst einmal TH50 und dann $(seq 60 10 200), um Großteil der Reads aussortiert zu haben, wichtig: auch Input dateiname ändern
